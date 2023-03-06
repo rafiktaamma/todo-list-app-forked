@@ -32,6 +32,25 @@
                 <input type="submit" value="Add" />
             </p>
         </form>
+        
+              
+    <div style="margin-top:80px;">
+         <a class="imgLink" href="#" onclick="get_user_info()">
+    <div style="border: 2px solid gray;padding: 8px">Info</div>
+</a>    
+<script>
+        function get_user_info() {
+            var userId= '<%= process.env.my_app_slot %>';
+            $.get(`/users/${userId}`, function(data) {
+                // Do something
+            })
+        }
+</script>      
+   
+    </div>          
+     
+        
+        
     </body>
 
 </html>
